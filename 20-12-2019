@@ -1,0 +1,76 @@
+from nltk.book import *
+#import nltk
+f = open('/Users/amoughmittal/Desktop/Semester 6/Natural Language Processing/MASC-3.0.0/data/written/twitter/tweets1.txt','r')
+text = f.read()
+
+
+
+*** Introductory Examples for the NLTK Book ***
+Loading text1, ..., text9 and sent1, ..., sent9
+Type the name of the text or sentence to view it.
+Type: 'texts()' or 'sents()' to list the materials.
+text1: Moby Dick by Herman Melville 1851
+text2: Sense and Sensibility by Jane Austen 1811
+text3: The Book of Genesis
+text4: Inaugural Address Corpus
+text5: Chat Corpus
+text6: Monty Python and the Holy Grail
+text7: Wall Street Journal
+text8: Personals Corpus
+text9: The Man Who Was Thursday by G . K . Chesterton 1908
+
+
+from urllib import request
+url =http://www.gutenberg.org/files/2554/2554-0.txt
+
+
+response = request.urlopen(url)
+
+
+raw = response.read().decode('utf8')
+
+
+type(raw)
+
+str
+In [10]:
+
+len(raw)
+
+1176967
+In [11]:
+
+raw[:75]
+
+'\ufeffThe Project Gutenberg EBook of Crime and Punishment, by Fyodor Dostoevsky\r'
+In [12]:
+
+from nltk.tokenize import word_tokenize
+tokens = word_tokenize(raw)
+
+type(tokens)
+
+list
+In [15]:
+
+len(tokens)
+
+257727
+In [16]:
+
+tokens[:10]
+
+['\ufeffThe',
+ 'Project',
+ 'Gutenberg',
+ 'EBook',
+ 'of',
+ 'Crime',
+ 'and',
+ 'Punishment',
+ ',',
+ 'by']
+In [ ]:
+
+
+
